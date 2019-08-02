@@ -9,9 +9,9 @@ import org.lwjgl.opengl.PixelFormat;
 
 public class DisplayManager {
 	
-	public static final int WIDTH = 1280;
-	public static final int HEIGHT = 720;
-	public static final int FPS_CAP = 120;
+	public static final int WIDTH = 640;
+	public static final int HEIGHT = 360;
+	public static final int FPS_CAP = 600;
 	public static String TITLE = "JAVA GAME ENGINE TEST ";
 	public static String VER = "v0.0.1";
 	
@@ -25,8 +25,8 @@ public class DisplayManager {
 		try {
 			Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
 			Display.create(new PixelFormat(), attribs);
+			Display.setLocation(WIDTH / 2, HEIGHT / 2);
 			Display.setTitle(TITLE + VER);
-			Display.setLocation(WIDTH/32,HEIGHT/16);
 		} catch (LWJGLException e) {
 			e.printStackTrace();
 		}
